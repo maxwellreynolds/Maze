@@ -7,7 +7,9 @@ class Maze:
     def __init__(self,bgr_img):
         """
         Args:
-            bgr_img (numpy matrix): Img matrix (bgr) read from cv2.imread
+            bgr_img (numpy matrix): Img matrix (bgr) read from cv2.imread. Can
+                                    be original maze img or augmented with
+                                    thick lines.
         """
         self.__img = bgr_img
         self.__row_size = bgr_img.shape[0]
@@ -70,15 +72,12 @@ class Maze:
             iter_v = self.__mat[iter_v.parent_x][iter_v.parent_y]
 
         path.reverse()
-        print("Path length: ", len(path))
-
-        # for pixel in path:
-        #     print(pixel)
-
         self.__path = path
         return path
 
     def __reset_vertex_matrix(self):
+        """Reset the pixel vertex matrix
+        """
         for row in range(self.__row_size):
             for col in range(self.__col_size):
                 self.__mat[row][col] = Vertex(row, col)
@@ -121,13 +120,29 @@ class Maze:
                 + (float(self.__img[v][2])-float(self.__img[u][2]))**2
         return dist
 
-    def get_solution_image(self, thickness=2):
+    def get_solution_image(self, alt_img=None, line_color=(255,0,0), 
+                            line_width=2):
+        """Get image with path maze path drawn over it
+
+        Args:
+            alt_img (np.mat, optional): An alternate maze image, used to draw 
+            over the solution if augmented img was used to find the path.
+            Defaults to None.
+            line_color (tuple, optional): [description]. Defaults to (255,0,0).
+            line_width (int, optional): [description]. Defaults to 2.
+
+        Returns:
+            [type]: [description]
+        """
         x0, y0 = self.__path[0]
-        sol_img = self.__img
+        if alt_img is None:
+            sol_img = np.copy(self.__img)
+        else:
+            sol_img = np.copy(alt_img)
 
         for vertex in self.__path[1:]:
             x1,y1=vertex
-            cv2.line(sol_img,(x0,y0),(x1,y1),(255,0,0),thickness)
+            cv2.line(sol_img,(x0,y0),(x1,y1),line_color,line_width)
             x0,y0=vertex
         
         return sol_img
