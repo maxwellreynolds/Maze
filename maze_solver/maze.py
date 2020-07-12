@@ -1,10 +1,10 @@
-from helpers import Vertex
+from maze_solver.helpers import Vertex
 import numpy as np
 import heapq
 import cv2
 
 class Maze:
-    def __init__(self,bgr_img):
+    def __init__(self, bgr_img, is_augmented=False):
         """
         Args:
             bgr_img (numpy matrix): Img matrix (bgr) read from cv2.imread. Can
@@ -12,6 +12,7 @@ class Maze:
                                     thick lines.
         """
         self.__img = bgr_img
+        self.__is_augmented = is_augmented
         self.__row_size = bgr_img.shape[0]
         self.__col_size = bgr_img.shape[1]
 
@@ -31,6 +32,18 @@ class Maze:
             list of tuples: Pixels (x,y) joining the path from start to end
         """
         self.__reset_vertex_matrix()
+
+        '''Below code fixes bug that arises due to augmentation of Maze
+        img to get clear path from start to end. Due to augmentation, the start
+        and end pixel rgb values may change from (255,255,255) to (0,0,0) and
+        consequently a wrong path through maze boundaries may be calculated.
+        '''
+        if self.__is_augmented:
+            strt = (start[1],start[0])
+            stop = (end[1],end[0])
+
+            self.__img[strt] = [255, 255, 255]
+            self.__img[stop] = [255, 255, 255]
 
         start_x, start_y = start[0], start[1]
         end_x, end_y = end[0], end[1]
