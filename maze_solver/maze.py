@@ -17,6 +17,8 @@ class Maze:
         self.__col_size = bgr_img.shape[1]
 
         self.__path = []
+        self.__start = ()
+        self.__end = ()
 
         self.__mat = np.full((bgr_img.shape[0],bgr_img.shape[1]), None)
         
@@ -45,6 +47,8 @@ class Maze:
             self.__img[strt] = [255, 255, 255]
             self.__img[stop] = [255, 255, 255]
 
+        self.__start = start
+        self.__end = end
         start_x, start_y = start[0], start[1]
         end_x, end_y = end[0], end[1]
 
@@ -157,6 +161,11 @@ class Maze:
             x1,y1=vertex
             cv2.line(sol_img,(x0,y0),(x1,y1),line_color,line_width)
             x0,y0=vertex
+
+        cv2.circle(sol_img, self.__start, radius=3, 
+                color=(0,255,0), thickness=-1)
+        cv2.circle(sol_img, self.__end, radius=3, 
+                color=(0,0,255), thickness=-1)
         
         return sol_img
 
