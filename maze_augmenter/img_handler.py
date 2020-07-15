@@ -14,23 +14,29 @@ EROSION_ITER = 3
 DILATION_ITER = 1
 
 class ImgMaze:
-    def __init__(self, img_path):
+    def __init__(self, img_path, is_filebytes):
         """Constructor for ImgMaze class
 
         Args:
             img_path (str): Path of image file
+            is_filebytes (bool): Whether arg{img_path} is a filebytes or string
         """
         self.__img = img_path
+        self.__is_filebytes = is_filebytes
+        if is_filebytes:
+            self.__readimage = cv2.imdecode
+        else:
+            self.__readimage = cv2.imread
             
 
     def get_bgr_maze(self):
-        return cv2.imread(self.__img)
+        return self.__readimage(self.__img, flags=cv2.IMREAD_COLOR)
 
     def get_gray_maze(self):
-        return cv2.imread(self.__img, flags=cv2.IMREAD_GRAYSCALE)
+        return self.__readimage(self.__img, flags=cv2.IMREAD_GRAYSCALE)
 
     def get_inv_gray_maze(self):
-        gray_img = cv2.imread(self.__img, flags=cv2.IMREAD_GRAYSCALE)
+        gray_img = self.__readimage(self.__img, flags=cv2.IMREAD_GRAYSCALE)
         inv_gray = cv2.bitwise_not(gray_img)
         return inv_gray
 

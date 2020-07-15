@@ -2,7 +2,7 @@ from img_handler import ImgMaze
 import cv2
 test_img = '../maze.png'
 
-maze_obj = ImgMaze(test_img)
+maze_obj = ImgMaze(test_img, is_filebytes=False)
 maze_bgr = maze_obj.get_bgr_maze()
 maze_gray = maze_obj.get_gray_maze()
 maze_inv_gray = maze_obj.get_inv_gray_maze()

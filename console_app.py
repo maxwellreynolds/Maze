@@ -60,11 +60,13 @@ def main():
             continue
 
         elif(key == ENTER_KEY):
+            print("Processing...")
             sol_obj = Maze(maze_aug, is_augmented=True)
             sol_obj.get_shortest_path(start, end)
             sol_img1 = sol_obj.get_solution_image(alt_img=maze_orig, 
                                                     line_width=2)
             cv2.imshow('Solution', sol_img1)
+            print("Done!!!")
             cv2.waitKey(0)
             cv2.destroyWindow('Solution')
 

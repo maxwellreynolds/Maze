@@ -1,2 +1,4 @@
 numpy
 opencv-python==3.4.9.33
+streamlit==0.63.0
+matplotlib

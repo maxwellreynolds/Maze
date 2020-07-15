@@ -13,14 +13,14 @@ class Maze:
         """
         self.__img = bgr_img
         self.__is_augmented = is_augmented
-        self.__row_size = bgr_img.shape[0]
-        self.__col_size = bgr_img.shape[1]
+        self.__row_size = bgr_img.shape[1]
+        self.__col_size = bgr_img.shape[0]
 
         self.__path = []
         self.__start = ()
         self.__end = ()
 
-        self.__mat = np.full((bgr_img.shape[0],bgr_img.shape[1]), None)
+        self.__mat = np.full((self.__row_size,self.__col_size), None)
         
 
     def get_shortest_path(self, start, end):
