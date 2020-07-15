@@ -37,7 +37,7 @@ def main():
         circle_thickness=(marked_image.shape[0]+marked_image.shape[0])//2//100 #ui circle thickness based on img size
         cv2.circle(marked_image, (start_x, start_y), circle_thickness, (0,255,0),-1)
         cv2.circle(marked_image, (finish_x, finish_y), circle_thickness, (255,0,0),-1)
-        st.image(marked_image, channels="RGB", width=800)
+        st.image(marked_image, channels="RGB", width=500)
 
     if marked_image is not None:
         if st.button('Get Path'):
@@ -51,7 +51,7 @@ def main():
                                                 alt_img=maze_image, 
                                                 line_width=path_thickness)
             
-            st.image(maze_sol_image, channels="RGB", width=800)
+            st.image(maze_sol_image, channels="RGB", width=500)
 
 if __name__ == "__main__":
     main()

@@ -42,7 +42,7 @@ def main():
     img_path = sys.argv[1]
     img_path = os.path.abspath(img_path)
 
-    img_obj = ImgMaze(img_path)
+    img_obj = ImgMaze(img_path, is_filebytes=False)
     maze_orig = img_obj.get_bgr_maze()
     maze_aug = img_obj.get_augmented_bgr_maze()
 
@@ -63,9 +63,10 @@ def main():
             print("Processing...")
             sol_obj = Maze(maze_aug, is_augmented=True)
             sol_obj.get_shortest_path(start, end)
-            sol_img1 = sol_obj.get_solution_image(alt_img=maze_orig, 
-                                                    line_width=2)
-            cv2.imshow('Solution', sol_img1)
+            sol_img = sol_obj.get_solution_image(alt_img=maze_orig, 
+                                                    line_width=2,
+                                                    line_color=(0,0,255))
+            cv2.imshow('Solution', sol_img)
             print("Done!!!")
             cv2.waitKey(0)
             cv2.destroyWindow('Solution')
