@@ -17,7 +17,7 @@ def main():
     marked_image = None
 
     if use_default_image:
-        maze_img_obj = ImgMaze('maze.png', is_filebytes=False)
+        maze_img_obj = ImgMaze('./img/maze.png', is_filebytes=False)
         maze_image = maze_img_obj.get_bgr_maze()
         maze_aug_image = maze_img_obj.get_augmented_bgr_maze()
 
@@ -41,7 +41,7 @@ def main():
 
     if marked_image is not None:
         if st.button('Get Path'):
-            with st.spinner('Searching for path from start to end'):
+            with st.spinner('Searching for path...'):
                 maze_solver_obj = Maze(maze_aug_image, is_augmented=True)
                 maze_solver_obj.get_shortest_path(start=(start_x, start_y), 
                                                 end=(finish_x, finish_y))

@@ -3,7 +3,7 @@ import cv2
 from maze import Maze
 
 
-maze_image = '../maze.png'
+maze_image = '../img/maze.png'
 
 start = (9,12)
 end = (213,211)

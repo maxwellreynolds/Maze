@@ -1,6 +1,6 @@
 from img_handler import ImgMaze
 import cv2
-test_img = '../maze.png'
+test_img = '../img/maze.png'
 
 maze_obj = ImgMaze(test_img, is_filebytes=False)
 maze_bgr = maze_obj.get_bgr_maze()
