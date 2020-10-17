@@ -19,6 +19,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
 enum-compat==0.0.3
+ffmpeg
 gitdb==4.0.5
 GitPython==3.1.9
 idna==2.10
