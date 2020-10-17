@@ -6,5 +6,5 @@
 ![Alt Text](mazeui2.png)
 
 
-Try:
+Try here:  
 https://share.streamlit.io/maxwellreynolds/maze/ui.py
