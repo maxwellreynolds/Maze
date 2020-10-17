@@ -87,7 +87,6 @@ def find_shortest_path(img,src,dst):
             pq.append(matrix[r][c])
     matrix[source_y][source_x].d=0
     pq=bubble_up(pq, matrix[source_y][source_x].index_in_queue)
-    
     while len(pq) > 0:
         u=pq[0]
         u.processed=True
@@ -113,6 +112,5 @@ def find_shortest_path(img,src,dst):
         path.append((iter_v.x,iter_v.y))
         iter_v=matrix[iter_v.parent_y][iter_v.parent_x]
 
-        
     path.append((source_x,source_y))
     return path
