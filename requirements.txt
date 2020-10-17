@@ -69,7 +69,7 @@ s3transfer==0.3.3
 Send2Trash==1.5.0
 six==1.15.0
 smmap==3.0.4
-streamlit==0.69.2
+streamlit==0.62.0
 terminado==0.9.1
 testpath==0.4.4
 toml==0.10.1
