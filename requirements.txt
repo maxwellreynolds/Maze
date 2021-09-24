@@ -255,7 +255,7 @@ python-ldap==3.2.0
 python-slugify==4.0.1
 pytz==2020.1
 PyWavelets==1.1.1
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==17.0.0
 QtAwesome==0.4.4
 qtconsole==4.3.1
