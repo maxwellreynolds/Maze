@@ -1,6 +1,5 @@
 absl-py==0.12.0
 alabaster==0.7.10
-alembic @ file:///home/conda/feedstock_root/build_artifacts/alembic_1599849174714/work
 altair==4.1.0
 anaconda-client==1.6.14
 anaconda-navigator==1.8.7
@@ -54,9 +53,7 @@ configobj==5.0.6
 confounds==0.1.1
 contextlib2==0.5.5
 contextvars==2.4
-cryptography @ file:///opt/concourse/worker/volumes/live/10fa08f7-3458-4bfb-6f1b-976b301073ba/volume/cryptography_1598892026412/work
 cvxopt==1.2.4
-cvxpy @ file:///usr/local/miniconda/conda-bld/cvxpy_1594404620155/work
 cycler==0.10.0
 Cython==0.28.2
 cytoolz==0.9.0.1
@@ -67,7 +64,6 @@ decorator==4.3.0
 deepdish==0.3.6
 defusedxml==0.6.0
 descartes==1.1.0
-dill @ file:///tmp/build/80754af9/dill_1593202311028/work
 distributed==1.21.8
 dj-database-url==0.5.0
 Django==2.2
@@ -79,7 +75,6 @@ enigmatoolbox==1.0.0
 entrypoints==0.2.3
 enum-compat==0.0.3
 et-xmlfile==1.0.1
-examplepackage @ file:///Users/maxreynolds/Documents/packages_tutorial
 fastcache==1.0.2
 fastprogress==1.0.0
 filelock==3.0.4
@@ -87,7 +82,6 @@ Fiona==1.8.11
 Flask==1.0.2
 Flask-Cors==3.0.4
 flatbuffers==2.0
-fsspec @ file:///tmp/build/80754af9/fsspec_1597944003862/work
 future==0.18.2
 gcalcli==4.3.0
 geopandas==0.6.1
@@ -113,7 +107,6 @@ imagesize==1.0.0
 imbalanced-learn==0.5.0
 imblearn==0.0
 immutables==0.15
-importlib-metadata @ file:///opt/concourse/worker/volumes/live/c15100a6-3aca-4bde-70bd-9279a634b55b/volume/importlib-metadata_1593446478014/work
 ipykernel==5.3.0
 ipython==6.4.0
 ipython-genutils==0.2.0
@@ -127,27 +120,22 @@ jdcal==1.4
 jedi==0.12.0
 Jinja2==2.10
 jmespath==0.10.0
-joblib @ file:///tmp/build/80754af9/joblib_1594236160679/work
 json5==0.9.5
 jsonschema==2.6.0
 jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==5.2.0
 jupyter-core==4.4.0
-jupyter-telemetry @ file:///home/conda/feedstock_root/build_artifacts/jupyter_telemetry_1605173804246/work
-jupyterhub @ file:///Users/runner/miniforge3/conda-bld/jupyterhub-feedstock_1604074245066/work
 jupyterlab==0.32.1
 jupyterlab-launcher==0.10.5
 jupyterlab-server==1.0.0
 kaggle==1.5.9
-keyring @ file:///opt/concourse/worker/volumes/live/e6101814-2712-41e7-5031-a1f08d158c46/volume/keyring_1598884775771/work
 kiwisolver==1.0.1
 lazy-object-proxy==1.3.1
 libarchive-c==2.9
 llvmlite==0.23.1
 locket==0.2.0
 lxml==4.2.1
-Mako @ file:///home/conda/feedstock_root/build_artifacts/mako_1629523042001/work
 MarkupSafe==1.0
 matplotlib==3.3.3
 mccabe==0.6.1
@@ -176,11 +164,9 @@ nose==1.3.7
 notebook==5.5.0
 numba==0.38.0
 numexpr==2.7.1
-numpy @ file:///opt/concourse/worker/volumes/live/3f9886a9-9d2f-4d0a-7e31-acf5536b90f1/volume/numpy_and_numpy_base_1596234665264/work
 numpydoc==0.8.0
 numpyro==0.7.0
 oauth2client==4.1.3
-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/oauthlib_1622563202229/work
 odo==0.5.1
 olefile==0.45.1
 opencv-python==4.1.0.25
@@ -228,7 +214,6 @@ pycurl==7.43.0.5
 pydeck==0.4.0b2
 pyflakes==1.6.0
 Pygments==2.2.0
-PyJWT @ file:///home/conda/feedstock_root/build_artifacts/pyjwt_1610910308735/work
 pylint==1.8.4
 pymc3==3.10.0
 pymer4==0.7.3
@@ -250,7 +235,6 @@ pytest-openfiles==0.3.0
 pytest-remotedata==0.2.1
 python-dateutil==2.7.3
 python-editor==1.0.4
-python-json-logger @ file:///home/conda/feedstock_root/build_artifacts/python-json-logger_1602545356084/work
 python-ldap==3.2.0
 python-slugify==4.0.1
 pytz==2020.1
@@ -268,11 +252,9 @@ rpy2==3.4.4
 rsa==4.6
 Rtree==0.8.3
 ruamel-yaml==0.15.35
-ruamel.yaml.clib @ file:///Users/runner/miniforge3/conda-bld/ruamel.yaml.clib_1610146874567/work
 s3transfer==0.3.3
 scikit-image==0.17.2
 scikit-learn==0.22.1
-scikit-survival @ file:///usr/local/miniconda/conda-bld/scikit-survival_1593857430125/work
 scipy==1.4.1
 scs==2.1.1.post2
 seaborn==0.11.1
@@ -323,14 +305,12 @@ toolz==0.9.0
 torch==1.9.0
 torchvision==0.9.1
 tornado==5.0.2
-tqdm @ file:///tmp/build/80754af9/tqdm_1596810128862/work
 traitlets==4.3.2
 typed-ast==1.4.1
 typing==3.6.4
 typing-extensions==3.7.4.3
 tzlocal==2.1
 unicodecsv==0.14.1
-UNKNOWN @ git+https://github.com/davismcc/GCTAtools@2c73b3fb2aad985e89bad8755ed6a64c09a33c98
 uritemplate==3.0.1
 urllib3==1.25.10
 validators==0.15.0
@@ -346,7 +326,6 @@ whitenoise==4.1.2
 widgetsnbextension==3.2.1
 wordcloud==1.6.0
 wrapt==1.10.11
-wurlitzer @ file:///opt/concourse/worker/volumes/live/629dc498-dffd-47db-6bc8-01e1c73271f0/volume/wurlitzer_1594753845784/work
 xarray==0.16.2
 xgboost==1.2.0
 xlrd==1.1.0
