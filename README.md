@@ -7,4 +7,4 @@
 
 
 Try here:  
-https://share.streamlit.io/maxwellreynolds/maze/ui.py
+https://maxwellreynolds-maze-ui-evjnk5.streamlitapp.com/
